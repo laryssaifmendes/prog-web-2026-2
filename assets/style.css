@@ -1,0 +1,18 @@
+body {
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    border-style: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.url {
+    color: red;
+    text-decoration: none;
+}
