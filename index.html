@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Eventos</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1 id="titulo">Minha página</h1>
+    <div>
+        <input id="nome" type="text">
+    </div>
+    <div>
+        <button onclick="pegaInput()">Enviar</button>
+    </div>
+    <script>
+        function pegaInput(){
+            let elemento = document.getElementById("nome").value;
+            alert(elemento)
+        }
+    </script>
+</body>
+</html>
