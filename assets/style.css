@@ -1,6 +1,15 @@
 body {
     align-items: center;
     text-align: center;
+    align-content: center;
+    background-color: black;
+    color: white;
+}
+
+div{
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 button {
@@ -15,4 +24,13 @@ button {
 .url {
     color: red;
     text-decoration: none;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: #f0f0f000;
+  border: 1px solid #ffffff;
+  padding: 16px;
+  margin: 10px;
 }

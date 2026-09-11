@@ -3,22 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula Eventos</title>
+    <title>Exercícios</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="script" href="script.js">
 </head>
 <body>
-    <h1 id="titulo">Minha página</h1>
-    <div>
-        <input id="nome" type="text">
-    </div>
-    <div>
-        <button onclick="pegaInput()">Enviar</button>
-    </div>
+
+    <h1>Strings</h1>
+    <button type="button" onclick="tiraespaco"></button>
+    <input id="entrada_com_espacos" type="text">
+
+    <input type="number" id="coefa">
+    <input type="number" id="coefb">
+    <input type="number" id="coefc">
+    <button type="button" ></button>
+
     <script>
-        function pegaInput(){
-            let elemento = document.getElementById("nome").value;
-            alert(elemento)
+        function tiraespaco(){
+            var filtro = "";
+            var palavra = document.getElementById("entrada_com_espacos").value;
+            for(var i = 0; i < palavra.length; i++){
+                if (palavra[i] !== " " && palavra[i] !== '@')
+                filtro - filtro + palavra[i];
+            }
+            alert(filtro);
+            console.log(filtro);
+        }
+        function raizes(){
+            var a = document.getElementById("coefa").value;
+            var b = document.getElementById("coefb").value;
+            var c = document.getElementById("coefc").value;
+
+            let delta = Math.pow(b,a) - (4 * a * c)
+            if (delta < 0){
+                alert("Não existem raízes reais");
+            }
+            else if (delta === 0){
+                let raiz = -b / (2 * a);
+                alert("A equação possui raízes reais: " + raiz);
+            }
         }
     </script>
+
+<!--
+    <h1>Exercício 2</h1>
+    <h3>Sistema de produtos</h3>
+    <div class="box">
+        <script>
+            console.log(nome_item1 + " - R$" + preco_item1 + " - quantidade: " + quantidade_item1);
+            console.log(nome_item2 + " - R$" + preco_item2 + " - quantidade: " + quantidade_item2);
+            console.log(nome_item3 + " - R$" + preco_item3 + " - quantidade: " + quantidade_item3);
+            console.log(nome_item4 + " - R$" + preco_item4 + " - quantidade: " + quantidade_item4);
+        </script>
+    </div>
+
+    <h1>Exercício 1</h1>
+    <h3>Base:</h3>
+    <input id="base" type="number">
+    <input id="altura" type="number">
+    <button onclick="alert(perimetro)">Calcular Perímetro</button>
+    <button onclick="alert(area)">Calcular Área</button>
+    <script>
+        function perimetro(){
+            let base = Number(document.getElementById('base').value);
+            let altura = Number(document.getElementById('altura').value);
+            alert(base * altura);
+        }
+
+        function area(){
+            let area
+        }
+    </script>
+    -----------------------------------------------------------------------
+-->
 </body>
 </html>
